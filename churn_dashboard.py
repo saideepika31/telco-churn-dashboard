@@ -12,7 +12,8 @@ from sklearn.metrics import confusion_matrix, classification_report, roc_curve, 
 st.title("Telco Customer Churn Dashboard")
 
 # Load dataset
-file_path = r"C:\Users\saide\Downloads\WA_Fn-UseC_-Telco-Customer-Churn.csv"
+file_path=df = "WA_Fn-UseC_-Telco-Customer-Churn.csv"
+
 df = pd.read_csv(file_path)
 
 # Preprocessing
@@ -92,3 +93,4 @@ if pred == 1:
     st.warning(f"This customer is likely to CHURN. Probability: {proba:.2f}")
 else:
     st.success(f"This customer will likely STAY. Churn probability: {proba:.2f}")
+
